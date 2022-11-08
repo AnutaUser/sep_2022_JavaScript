@@ -1,19 +1,18 @@
-// - Створити масив, наповнити його 10 елементами будь-якого типу, вивести кожен елемент в
-// консоль
-// let array = [
-//     100500,
-//     true,
-//     false,
-//     '500',
-//     'number',
-//     {name: 'Ira', age: 22, status: true},
-//     [1, 2, 3, 4, 5,],
-//     ['1', '2', '3'],
-//     [{name: 'Ivan'}, {name: 'Petro'}, {name: 'Olha'}],
-//     {skills: ['HTML', 'CSS', 'JS']}
-// ];
+// // - Створити масив, наповнити його 10 елементами будь-якого типу, вивести кожен елемент в консоль
+// let array = [];
 //
-// console.log(array.length);
+// array[0] = 100500;
+// array[1] = true;
+// array[2] = false;
+// array[3] = '100500';
+// array[4] = 'number';
+// array[5] = {name: 'Ira', age: 22, status: true};
+// array[6] = [1, 2, 3, 4, 5,];
+// array[7] = ['1', '2', '3'];
+// array[8] = [{name: 'Ivan', age: 25}, {name: 'Petro', age: 32}, {name: 'Olha', age: 17}];
+// array[9] = {skills: ['HTML', 'CSS', 'JS']};
+//
+// console.log(`Array length is: ${array.length}.`);
 // console.log(array);
 //
 // console.log(array[0]);
@@ -26,29 +25,15 @@
 // console.log(array[7]);
 // console.log(array[8]);
 // console.log(array[9]);
-//
-// console.log(typeof array[0]);
-// console.log(typeof array[1]);
-// console.log(typeof array[2]);
-// console.log(typeof array[3]);
-// console.log(typeof array[4]);
-// console.log(typeof array[5]);
-// console.log(typeof array[6]);
-// console.log(typeof array[7]);
-// console.log(typeof array[8]);
-// console.log(typeof array[9]);
-//
-// console.log(array[8][2]);
-// console.log(array[9].skills[1]);
 
-// - Створити 3 об'єкти які описують книги. Поля об'єкту : title ,pageCount, genre.
+// // - Створити 3 об'єкти які описують книги. Поля об'єкту : title ,pageCount, genre.
 // let book_1 = {title: 'Harry Potter and the Sorcerers Stone', pageCount: 309, genre: 'fantasy novel', author: ' J. K. Rowling'};
 // let book_2 = {title: 'Eclipse', pageCount: 629, genre: 'novel', author: 'Stephenie Meyer'};
 // let book_3 = {title: 'Sherlock Holmes', pageCount: 752, genre: 'detective', author: 'Arthur Conan Doyle'};
 //
 // console.log(book_1, book_2, book_3);
 
-// - Створити 3 об'єкти які описують книги. Поля об'єкту : title ,pageCount, genre, authors. Поле "автори" - масив. Кожен автор має поля name,age
+// // - Створити 3 об'єкти які описують книги. Поля об'єкту : title ,pageCount, genre, authors. Поле "автори" - масив. Кожен автор має поля name,age
 // let book_1 = {
 //     title: 'Harry Potter and the Sorcerers Stone',
 //     pageCount: 309,
@@ -83,7 +68,7 @@
 // // - Створити масив з 10 об'єктами які описують сутніть "користувач". Поля: name, username,password. Вивести в консоль пароль кожного користувача
 // let users = [
 //     {name: 'Ivan', userName: 'banan', password: 'Ivan-banan'},
-//     {name: 'Olha', userName: 'apelsinka', password: 'Olha-apelsinka'},
+//     {name: 'Olha', userName: 'apelsinka', password: 'Olka-fasolka'},
 //     {name: 'Anna', userName: 'sweet', password: 'Anna-sweet'},
 //     {name: 'Daniel', userName: 'kokos', password: 'Daniel-kokos'},
 //     {name: 'Karina', userName: 'kara', password: 'Karina-kara'},
@@ -93,7 +78,7 @@
 //     {name: 'Lisa', userName: 'Elisa', password: 'Lisa-Elisa'},
 //     {name: 'Gabriel', userName: 'garbus', password: 'Gabriel-garbus'},
 // ];
-// //
+//
 // // console.log(users);
 // // console.log(users[0].password);
 // // console.log(users[1].password);
@@ -105,8 +90,9 @@
 // // console.log(users[7].password);
 // // console.log(users[8].password);
 // // console.log(users[9].password);
-//
+// //
 // console.log(typeof users);
+// console.log(Array.isArray(users));
 // console.log(Array.isArray(users));
 //
 // users.map(user => {
