@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 10vh;
+    column-gap: 10vw;
+}
+
+.product-card {
+    background: #ebf8f8;
+    width: 40vw;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 5%;
+}
+
+.product-image {
+    width: 100px;
+}
