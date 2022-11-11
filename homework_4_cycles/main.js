@@ -20,7 +20,7 @@
 // while (i<20) {
 //     document.write(`
 //     <h1>Some text inside !</h1>
-//     `)
+//     `);
 //     i++;
 // }
 
@@ -163,4 +163,3 @@ for (const user of users) {
         `)
     }
 }
-

@@ -1,0 +1,21 @@
+.users-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 8vh;
+    column-gap: 6%;
+
+}
+
+.user-block {
+    width: 40%;
+    background: #ebf8f8;
+}
+
+h3, h4 {
+    text-align: center;
+}
+
+.address-block {
+    margin-left: 10%;
+}
