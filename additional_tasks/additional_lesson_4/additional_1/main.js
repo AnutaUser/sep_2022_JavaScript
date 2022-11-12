@@ -253,6 +253,10 @@ let array = [2, 17, 13, 6, 22, 31, 45, 66, 100, -18];
 //     document.write(` -- ${i}. step: ${step}`);
 //     step += 2;
 // }
+//
+// for (let i = 0; i < 100; i+=2) {
+//     console.log(i);
+// }
 
 // - Створити цикл for на 100 ітерацій. Вивести тільки парні кроки. через console.log + document.write
 //
@@ -273,29 +277,30 @@ let array = [2, 17, 13, 6, 22, 31, 45, 66, 100, -18];
 // }
 
 // стоврити масив книжок (назва, кількість сторінок, автори , жанри).
-
-let books = [
-    {name: 'Harry Potter', pages: 323, authors: ['Dfghjk', 'guhkj'], genres: ['aaaaaa', 'sssssss', 'ddddddd']},
-    {name: 'Little Prince', pages: 95, authors: ['Gdvxcvd'], genres: ['xzxxxx', 'asd']},
-    {name: 'Dracula', pages: 120, authors: ['Xcsac'], genres: ['aaaaaa', 'sssssss', 'sv', 'ddddddd']},
-    {name: 'The Lost World', pages: 235, authors: ['Acsc', 'Frhftgn', 'Lojikn'], genres: ['sssssss', 'ddddddd']},
-    {name: 'Yellow wallpaper', pages: 951, authors: ['Dfghjk', 'guhkj'], genres: ['asdf']},
-    {name: 'Three man in a boat', pages: 200, authors: ['Sgghj'], genres: ['ughbnj']},
-    {name: 'Frankenstein', pages: 180, authors: ['Ckihjn'], genres: ['aaaaaa', 'sssssss']},
-    {name: 'Zorro', pages: 510, authors: ['Plopkmo'], genres: ['aaaaaa', 'sssssss', 'ddddddd', 'jjklnlkn']},
-    {name: 'Alice in Wonderland ', pages: 413, authors: ['Ikmo', 'Uhhn'], genres: ['sssssss', 'ddddddd']},
-    {name: 'Tom Sawyer', pages: 297, authors: ['Zlm'], genres: ['frvssss']},
-];
+//
+// let books = [
+//     {name: 'Harry Potter', pages: 323, authors: ['Dfghjk', 'guhkj'], genres: ['aaaaaa', 'sssssss', 'ddddddd']},
+//     {name: 'Little Prince', pages: 95, authors: ['Gdvxcvd'], genres: ['xzxxxx', 'asd']},
+//     {name: 'Dracula', pages: 120, authors: ['Xcsac'], genres: ['aaaaaa', 'sssssss', 'sv', 'ddddddd']},
+//     {name: 'The Lost World', pages: 235, authors: ['Acsc', 'Frhftgn', 'Lojikn'], genres: ['sssssss', 'ddddddd']},
+//     {name: 'Yellow wallpaper', pages: 951, authors: ['Dfghjk', 'guhkj'], genres: ['asdf']},
+//     {name: 'Three man in a boat', pages: 200, authors: ['Sgghj'], genres: ['ughbnj']},
+//     {name: 'Frankenstein', pages: 180, authors: ['Ckihjn'], genres: ['aaaaaa', 'sssssss']},
+//     {name: 'Zorro', pages: 510, authors: ['Plopkmo'], genres: ['aaaaaa', 'sssssss', 'ddddddd', 'jjklnlkn']},
+//     {name: 'Alice in Wonderland ', pages: 413, authors: ['Ikmo', 'Uhhn'], genres: ['sssssss', 'ddddddd']},
+//     {name: 'Tom Sawyer', pages: 297, authors: ['Zlm'], genres: ['frvssss']},
+// ];
 
 // -знайти наібльшу книжку.
+//
 // let maxPages = books[0];
 //
 // for (const book of books) {
 //     if (book.pages > maxPages.pages) {
 //         maxPages = book;
-//         console.log(book);
 //     }
 // }
+// console.log(maxPages);
 
 // - знайти книжку/ки з найбільшою кількістю жанрів
 //
@@ -303,22 +308,21 @@ let books = [
 //
 // for (const book of books) {
 //     if (book.genres.length > maxGenres.genres.length) {
-//         maxGenres = [book];
+//         maxGenres = book;
 //             console.log(book);
 //     }
 // }
 
 // - знайти книжку/ки з найдовшою назвою
 //
-// let maxName = books[0];
+// let maxName = books[0]
+//
 // for (let i = 0; i < books.length; i++) {
 //     if (books[i].name.length > maxName.name.length) {
-//         console.log(books[i].name.length);
-//         console.log(maxName.name.length);
 //         maxName = books[i];
-//         console.log(books[i]);
 //     }
 // }
+// console.log(maxName);
 
 // - знайти книжку/ки які писали 2 автори
 //
