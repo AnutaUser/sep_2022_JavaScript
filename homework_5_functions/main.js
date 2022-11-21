@@ -10,24 +10,24 @@
 
 // - створити функцію яка обчислює та повертає площу кола з радіусом r
 //
-// function SCircle(r, PI) {
-//     S = PI * r ** 2;
+// function SCircle(r) {
+//     S = Math.PI * r ** 2;
 //     return S;
 // }
 //
-// console.log(SCircle(10, 3.14));
+// console.log(SCircle(10));
 //
-// const SCirc = (r, PI) => PI * Math.pow(r, 2);
-// console.log(SCirc(5, 3.14));
+// const SCirc = (r) => Math.PI * Math.pow(r, 2);
+// console.log(SCirc(5));
 
 // - створити функцію яка обчислює та повертає площу циліндру висотою h, та радіутом r
 //
-// function SCylinder(h, r, PI) {
-//     return 2 * PI * r ** 2 + 2 * PI * r * h;
+// function SCylinder(h, r) {
+//     return 2 * Math.PI * r ** 2 + 2 * Math.PI * r * h;
 // }
-// console.log(SCylinder(10, 5, 3.14));
+// console.log(SCylinder(10, 5));
 //
-// const SCyl = (h, r, PI) => 2 * PI * r ** 2 + 2 * PI * r * h;
+// const SCyl = (h, r) => 2 * Math.PI * r ** 2 + 2 * Math.PI * r * h;
 // console.log(SCylinder(8, 4, 3.14));
 
 // - створити функцію яка приймає масив та виводить кожен його елемент
@@ -264,19 +264,18 @@
 // }
 // console.log(numbers);
 //
-// function minNum([...array]) {
-//     let min = Math.min(...array);
-//     console.log(min);
+// function minNum(array) {
+//     let minN = Math.min(...array);
+//     return minN;
 // }
 //
-// minNum(numbers);
+// console.log(minNum(numbers));
 //
 // const minN = (array) => {
 //     let min = array[0];
 //     for (const arr of array) {
 //         if (arr < min) {
 //             min = arr;
-//             console.log(min);
 //         }
 //     }
 //     return min;
@@ -287,12 +286,12 @@
 // Приклад [1,2,10]->13
 //
 // let numbers = [];
-// for (let i = 0; i < 20; i++) {
+// for (let i = 0; i < 2; i++) {
 //     numbers[i] = Math.round(Math.random() * 100);
 // }
 // console.log(numbers);
-
-// function sumArray ([...array]) {
+//
+// function sumArray (array) {
 //     let sum = 0;
 //     for (const arr of array) {
 //         sum += arr;

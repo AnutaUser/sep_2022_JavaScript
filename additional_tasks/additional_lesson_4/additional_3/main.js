@@ -51,7 +51,7 @@
 // }
 // console.log(array);
 
- // 2. Вивести за допомогою console.log кожен третій елемен
+// 2. Вивести за допомогою console.log кожен третій елемен
 // for (let i = 0; i < array2.length; i++) {
 //     if (!(i % 3)) {
 //         console.log(array2[i]);
