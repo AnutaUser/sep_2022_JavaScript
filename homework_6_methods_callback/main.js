@@ -1,30 +1,31 @@
-// - Знайти та вивести довижину настипних стрінгових значень
+// // - Знайти та вивести довижину настипних стрінгових значень
+// //
+// const str1 = 'hello world';
+// const str2 = 'lorem ipsum';
+// const str3 = 'javascript is cool';
 //
-const str1 = 'hello world';
-const str2 = 'lorem ipsum';
-const str3 = 'javascript is cool';
-
-// console.log(`length1: ${str1.length}`);
-// console.log(`length2: ${str2.length}`);
-// console.log(`length3: ${str3.length}`);
-console.log(`length1: ${str1.length}, length2: ${str2.length}, length3: ${str3.length}`);
+// // console.log(`length1: ${str1.length}`);
+// // console.log(`length2: ${str2.length}`);
+// // console.log(`length3: ${str3.length}`);
+// console.log(`length1: ${str1.length}, length2: ${str2.length}, length3: ${str3.length}`);
 
 
 // - Перевести до великого регістру наступні стрінгові значення
 // 'hello world', 'lorem ipsum', 'javascript is cool'
-
+//
 // console.log(str1.toUpperCase());
 // console.log(str2.toUpperCase());
 // console.log(str3.toUpperCase());
-console.log(str1.toUpperCase(), str2.toUpperCase(), str3.toUpperCase());
-// - Перевести до нижнього регістру настипні стрінгові значення
+// console.log(str1.toUpperCase(), str2.toUpperCase(), str3.toUpperCase());
 
+// - Перевести до нижнього регістру настипні стрінгові значення
+//
 // 'HELLO WORLD', 'LOREM IPSUM', 'JAVASCRIPT IS COOL'
 //
 // console.log(str1.toLowerCase());
 // console.log(str2.toLowerCase());
 // console.log(str3.toLowerCase());
-console.log(str1.toLowerCase(), str2.toLowerCase(), str3.toLowerCase());
+// console.log(str1.toLowerCase(), str2.toLowerCase(), str3.toLowerCase());
 
 // - Є "брудна" стрінга let str = ' dirty string   ' . Почистити її від зайвих пробілів.
 //

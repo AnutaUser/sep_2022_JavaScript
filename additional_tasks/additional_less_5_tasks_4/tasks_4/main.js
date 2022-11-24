@@ -324,15 +324,15 @@ let arrayOfKeys = [];
 //     - Створити функцію яка приймає масив будь яких объектів, та повертає масив значень всіх обєктів
 // EXAMPLE:
 //     [{name: 'Dima', age: 13}, {model: 'Camry'}]  ===> [ Dima, 13, Camry ]
+// //
+// function throwValue(array) {
+//     for (let i = 0, j = 0; i < array.length; i++) {
+//         for (const key in array[i]) {
+//             arrayOfKeys[j++] = array[i][key];
+//         }
+//     }
+//     return arrayOfKeys;
+// }
 //
-function throwValue(array) {
-    for (let i = 0, j = 0; i < array.length; i++) {
-        for (const key in array[i]) {
-            arrayOfKeys[j++] = array[i][key];
-        }
-    }
-    return arrayOfKeys;
-}
-
-throwValue(arrayOfObj);
-console.log(arrayOfKeys);
+// throwValue(arrayOfObj);
+// console.log(arrayOfKeys);

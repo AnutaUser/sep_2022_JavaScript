@@ -183,10 +183,9 @@
 // console.log(array1);
 // console.log(array2);
 
-//
 // - Дано 2 масиви з рівною кількістю об'єктів.
 // Масиви:
-    let usersWithId = [
+let usersWithId = [
         {id: 1, name: 'vasya', age: 31, status: false},
         {id: 2, name: 'petya', age: 30, status: true},
         {id: 3, name: 'kolya', age: 29, status: true},
