@@ -255,18 +255,27 @@
 // const str = 'Астрономия это наука о небесных объектах';
 // // document.writeln(count(str, sym)) // 5
 //
-// const counts = (string, stringSearch) => {
-//     let array = string.split('');
-//     let count = 0;
+// // const count = (string, stringSearch) => {
+// //     let array = string.split('');
+// //     let count = 0;
+// //
+// //     for (const arr of array) {
+// //         if (arr === stringSearch) {
+// //             count += 1;
+// //         }
+// //     }
+// //     return count;
+// // }
 //
-//     for (const arr of array) {
-//         if (arr === stringSearch) {
-//             count += 1;
-//         }
-//     }
-//     return count;
-// }
-// console.log(counts(str, sym));
+// // const count = (string, stringSearch) => {
+// //     let counter = 0;
+// //     for (const str of string) {
+// //         str === stringSearch ? counter++ : console.error('Something went wrong');
+// //     }
+// //     return counter;
+// // }
+// //
+// // console.log(count(str, sym));
 
 // // - Напишіть функцію cutString(str, n), яка видаляє зайві слова з рядка str, залишивши у ній n слів.
 // let str = "Сила тяжести приложена к центру масс тела";
