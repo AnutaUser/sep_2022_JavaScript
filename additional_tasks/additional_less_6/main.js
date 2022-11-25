@@ -250,25 +250,23 @@
 // coursesArray.sort((a, b) => b.modules.length - a.modules.length);
 // console.log(coursesArray);
 
-// - Напишіть функцію count(str, stringSearch), яка повертає кількість символів stringSearch у рядку str.
-let sym = 'o';
-const str = 'Астрономия это наука о небесных объектах';
-// document.writeln(count(str, sym)) // 5
-
-const counts = (string, stringSearch) => {
-    let count = 0;
-
-    for (let i = 0; i < string.length; i++) {
-        // console.log(stringSearch.length);
-        // console.log(typeof stringSearch);
-        // console.log(typeof string[i]);
-        string[i] = stringSearch ? count++ : console.error('something wrong');
-    }
-    console.log(count);
-    return count;
-}
-
-console.log(counts(str, sym));
+// // - Напишіть функцію count(str, stringSearch), яка повертає кількість символів stringSearch у рядку str.
+// let sym = 'о';
+// const str = 'Астрономия это наука о небесных объектах';
+// // document.writeln(count(str, sym)) // 5
+//
+// const counts = (string, stringSearch) => {
+//     let array = string.split('');
+//     let count = 0;
+//
+//     for (const arr of array) {
+//         if (arr === stringSearch) {
+//             count += 1;
+//         }
+//     }
+//     return count;
+// }
+// console.log(counts(str, sym));
 
 // // - Напишіть функцію cutString(str, n), яка видаляє зайві слова з рядка str, залишивши у ній n слів.
 // let str = "Сила тяжести приложена к центру масс тела";
