@@ -256,21 +256,19 @@ const str = 'Астрономия это наука о небесных объе
 // document.writeln(count(str, sym)) // 5
 
 const counts = (string, stringSearch) => {
-    let count = [];
-    console.log(stringSearch)
-    for (let i = 0, j = 0; i < string.length; i++) {
-        if (string[i] === stringSearch) {
-            console.log(string[i])
-            count[j++] = string[i];
-        }
+    let count = 0;
+
+    for (let i = 0; i < string.length; i++) {
+        // console.log(stringSearch.length);
+        // console.log(typeof stringSearch);
+        // console.log(typeof string[i]);
+        string[i] = stringSearch ? count++ : console.error('something wrong');
     }
     console.log(count);
-    return count.length;
+    return count;
 }
 
 console.log(counts(str, sym));
-console.log(sym);
-console.log(str);
 
 // // - Напишіть функцію cutString(str, n), яка видаляє зайві слова з рядка str, залишивши у ній n слів.
 // let str = "Сила тяжести приложена к центру масс тела";
