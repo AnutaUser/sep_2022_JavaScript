@@ -9,7 +9,6 @@
 // // console.log(`length3: ${str3.length}`);
 // console.log(`length1: ${str1.length}, length2: ${str2.length}, length3: ${str3.length}`);
 
-
 // - Перевести до великого регістру наступні стрінгові значення
 // 'hello world', 'lorem ipsum', 'javascript is cool'
 //
