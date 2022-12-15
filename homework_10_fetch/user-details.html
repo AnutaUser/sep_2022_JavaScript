@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>user details</title>
+</head>
+<body>
+<script>
+
+    const url = new URL(location.href);
+    const id = url.searchParams.get('id');
+    console.log(id);
+
+    fetch('http://jsonplaceholder.typicode.com/users/' + id)
+    .then(value => value.json())
+    .then(user => {
+        const userDiv = document.createElement('div');
+        document.body.appendChild(userDiv);
+
+        const idP = document.createElement('ph2');
+        idP.innerText = `ID: ${user.id}`;
+
+        const name = document.createElement('h2');
+        name.innerText = `Name: ${user.name}`;
+
+        const username = document.createElement('h3');
+        username.innerText = `Username: ${user.username}`;
+
+        const email = document.createElement('p');
+        email.innerText = `Email:  ${user.email}`;
+
+        const address = document.createElement('p');
+        address.innerHTML = `
+        <p>Address: </p>
+        <p>Street: ${user.address.street}</p>
+        <p>Suite: ${user.address.suite}</p>
+        <p>City: ${user.address.city}</p>
+        <p>Zipcode: ${user.address.zipcode}</p>
+        <p>Geo: </p>
+        <p>Lat: ${user.address.geo.lat}</p>
+        <p>Lng: ${user.address.geo.lng}</p>
+        `;
+
+        const phone = document.createElement('p');
+        phone.innerText = `Phone: ${user.phone}`;
+
+        const website = document.createElement('p');
+        website.innerText = `Website: ${user.website}`;
+
+        const company = document.createElement('p');
+        company.innerHTML = `
+        <p>Company: </p>
+        <p>Name: ${user.company.name}</p>
+        <p>CatchPhrase: ${user.company.catchPhrase}</p>
+        <p>BS: ${user.company.bs}</p>
+        `;
+
+        userDiv.append(idP, name, username, email, address, phone, website, company);
+    })
+
+</script>
+</body>
+</html>

@@ -194,9 +194,9 @@ let usersList = [
 const div = document.createElement('div');
 
 div.setAttribute('contenteditable', 'true');
-
-let text = div.innerText;
-console.log(text)
+console.log(div.value);
+// let text = div;
+// console.log(text)
 // if (text + '\t') {
     // text = <text></text>
 // }
