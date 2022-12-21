@@ -16,7 +16,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
 
             const button = document.createElement('button');
             button.classList.add('userDetailsBtn');
-            button.innerText = `-- ${name} details ---`;
+            button.innerText = `${name} details`;
 
             const a = document.createElement('a');
             a.href = '../userDetailsPage/userDetails.html?data=' + JSON.stringify(user);

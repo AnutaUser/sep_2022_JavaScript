@@ -38,10 +38,21 @@ fetch('https://jsonplaceholder.typicode.com/comments')
 
 const button = document.createElement('button');
 button.classList.add('button');
-button.innerText = 'dark / light';
+button.innerText = 'light';
+
+let click = true;
 
 button.addEventListener('click', () => {
     postDetailsMain.classList.toggle('light-theme');
+
+    console.log(button.length);
+    if (!click) {
+        button.innerText = 'light';
+    }
+    else {
+        button.innerText = 'dark';
+    }
+    click = !click;
 });
 
 const back = document.createElement('button');

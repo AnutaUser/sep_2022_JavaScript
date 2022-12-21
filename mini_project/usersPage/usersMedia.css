@@ -1,10 +1,16 @@
 @media screen and (max-width: 500px) {
 
     .usersMain {
-        overflow: scroll
+        overflow: scroll;
+        padding-bottom: 2vh;
     }
 
     .userDiv {
         font-size: 3.4vh;
     }
+
+    .userDetailsBtn {
+        font-size: 4vw;
+    }
+
 }
