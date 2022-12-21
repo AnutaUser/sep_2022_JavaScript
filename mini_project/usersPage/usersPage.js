@@ -6,16 +6,22 @@ fetch('https://jsonplaceholder.typicode.com/users')
         users.map(user => {
             const {id, name} = user;
 
+            const userBtnDiv = document.createElement('div');
+            userBtnDiv.classList.add('userBtnDiv');
+            mainDiv.appendChild(userBtnDiv);
+
             const userDiv = document.createElement('h2');
+            userDiv.classList.add('userDiv');
             userDiv.innerText = `${user.id}. ${name}`;
 
             const button = document.createElement('button');
-            button.innerText = 'user details';
+            button.classList.add('userDetailsBtn');
+            button.innerText = `-- ${name} details ---`;
 
             const a = document.createElement('a');
             a.href = '../userDetailsPage/userDetails.html?data=' + JSON.stringify(user);
 
             a.appendChild(button);
-            mainDiv.append(userDiv, a);
+            userBtnDiv.append(userDiv, a);
         });
     });

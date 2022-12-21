@@ -1,0 +1,10 @@
+@media screen and (max-width: 500px) {
+
+    .usersMain {
+        overflow: scroll
+    }
+
+    .userDiv {
+        font-size: 3.4vh;
+    }
+}

@@ -1,0 +1,76 @@
+:root {
+    --col-text: #d9d3d3;
+
+}
+
+.userDetailsMain {
+    background-image: url("../backgroundPictures/HD-wallpaper-red.jpg");
+    height: 100vh;
+    background-attachment: fixed;
+    box-sizing: border-box;
+}
+
+.userBtnDiv {
+    border-bottom: 1px solid white;
+    color: var(--col-text);
+    text-align: center;
+    padding-bottom: 1vh;
+    padding-top: 1vh;
+
+}
+
+.keyDiv {
+    font-size: 1.5vw;
+}
+
+.button {
+    width: 90%;
+    border-radius: 2vh;
+    cursor: pointer;
+    background: var(--col-text);
+}
+
+.hidden {
+    display: none;
+}
+
+.postsDiv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    row-gap: 2vw;
+    margin-top: 3vw;
+}
+
+.postBtn {
+    background: var(--col-text);
+    border-radius: 1vw;
+    cursor: pointer;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.postBtnDiv {
+    width: 17%;
+}
+
+.postDiv {
+    color: var(--col-text);
+    text-align: justify;
+    font-size: 2.5vh;
+}
+
+.back, .forward {
+    background: var(--col-text);
+    border-radius: 1vw;
+    cursor: pointer;
+    position: fixed;
+    bottom: 3vh;
+    left: 46vw;
+    width: 4vw;
+}
+
+.forward{
+    margin-left: 4vw;
+}

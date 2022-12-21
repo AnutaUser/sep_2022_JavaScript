@@ -1,0 +1,21 @@
+@media screen and (max-width: 500px){
+
+    .postDetailsMain {
+        overflow: scroll;
+    }
+
+    .postDiv {
+        width: 92%;
+    }
+
+    .commentDiv {
+        width: 40vw;
+        overflow: hidden;
+    }
+
+    .button, .back{
+        margin: .5vh;
+        width: 19vw;
+        font-size: 80%;
+    }
+}

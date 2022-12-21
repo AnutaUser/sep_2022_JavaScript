@@ -1,0 +1,37 @@
+@media screen and (max-width: 500px){
+
+    .userDetailsMain {
+        overflow: scroll;
+    }
+
+    .userBtnDiv {
+        height: 107vw;
+    }
+
+    .keyDiv {
+        font-size: 4.5vw;
+        margin-bottom: 1.5vw;
+    }
+
+    .postBtnDiv {
+        width: 30vw;
+    }
+
+    .postDiv {
+    font-size: 4.5vw;
+        text-align: center;
+    }
+
+    .back, .forward {
+        position: relative;
+        width: 17vw;
+        left: 35vw;
+        bottom: -3vh;
+        border-radius: 3vw;
+    }
+
+    .forward {
+        margin-left: 3vw;
+    }
+
+}

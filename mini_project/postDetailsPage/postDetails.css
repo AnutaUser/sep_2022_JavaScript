@@ -1,0 +1,68 @@
+:root {
+    --col-post: #b9d8e0;
+    --col-darkslateblue: darkslateblue;
+}
+
+.postDetailsMain {
+    background-image: url("../backgroundPictures/Purple-smoke-on-black-background.webp");
+    background-attachment: fixed;
+    overflow: scroll;
+    height: 100vh;
+    text-align: center;
+    padding-top: 3vh;
+    box-sizing: border-box;
+}
+
+.postDiv {
+    color: var(--col-post);
+}
+
+.postCommentsDiv {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 2vw;
+    justify-content: space-evenly;
+    margin-top: 4vh;
+}
+
+.commentDiv {
+    color: var(--col-post);
+    border: 1px solid blueviolet;
+    width: 22%;
+}
+
+.pPostDiv {
+    margin-top: 0;
+}
+
+.button, .back{
+    background: var(--col-post);
+    color: blueviolet;
+    cursor: pointer;
+    margin: 3vh;
+    width: 7vw;
+    height: 3vh;
+    border: none;
+    border-radius: 0.5vh;
+}
+
+.light-theme {
+    background-image: url(../backgroundPictures/light-purple-background-paste.webp);
+}
+
+.postDetailsMain.light-theme p {
+    color: var(--col-darkslateblue);
+}
+
+.postDetailsMain.light-theme h2 {
+    color: var(--col-darkslateblue);
+}
+
+.postDetailsMain.light-theme h3 {
+    color: var(--col-darkslateblue);
+}
+
+.postDetailsMain.light-theme button{
+    background: var(--col-darkslateblue);
+    color: var(--col-post);
+}
