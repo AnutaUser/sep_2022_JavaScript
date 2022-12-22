@@ -41,7 +41,7 @@ userDetailsDiv.append(postsDiv);
 let flag = true;
 
 button.onclick = () => {
-    // if (flag) {
+
     fetch('https://jsonplaceholder.typicode.com/posts')
         .then(value => value.json())
         .then(posts => {
@@ -68,14 +68,6 @@ button.onclick = () => {
         });
     button.disabled = true;
 };
-
-    // if (!flag) {
-    //     // postsDiv.classList.toggle('hidden');
-    //     postsDiv.style.display = 'none';
-    // }
-    // flag = !flag;
-// };
-
 
 const back = document.createElement('button');
 back.classList.add('back');
