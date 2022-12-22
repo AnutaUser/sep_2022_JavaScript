@@ -4,9 +4,9 @@
 }
 
 .postDetailsMain {
-    background-image: url("../backgroundPictures/Purple-smoke-on-black-background.webp");
+    background-image: url("IdeaProjects/mini_project_javaScript_sep_2022/mini_project/backgroundPictures/Purple-smoke-on-black-background.webp");
     background-attachment: fixed;
-    overflow: scroll;
+    /*overflow: scroll;*/
     height: 100vh;
     text-align: center;
     padding-top: 3vh;
@@ -47,7 +47,7 @@
 }
 
 .light-theme {
-    background-image: url(../backgroundPictures/light-purple-background-paste.webp);
+    background-image: url(IdeaProjects/mini_project_javaScript_sep_2022/mini_project/backgroundPictures/light-purple-background-paste.webp);
 }
 
 .postDetailsMain.light-theme p {
