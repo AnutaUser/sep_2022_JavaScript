@@ -28,6 +28,7 @@
     border-radius: 2vh;
     cursor: pointer;
     background: var(--col-text);
+    border: none;
 }
 
 .hidden {
@@ -44,6 +45,7 @@
 
 .postBtn {
     background: var(--col-text);
+    border: none;
     border-radius: 1vw;
     cursor: pointer;
     position: relative;
@@ -53,6 +55,9 @@
 
 .postBtnDiv {
     width: 17%;
+    border-left: 1px solid #e07777;
+    padding: 1vh;
+    box-sizing: border-box;
 }
 
 .postDiv {
@@ -64,13 +69,14 @@
 .back, .forward {
     background: var(--col-text);
     border-radius: 1vw;
+    border: none;
     cursor: pointer;
     position: fixed;
     bottom: 3vh;
-    left: 46vw;
+    left: 45vw;
     width: 4vw;
 }
 
 .forward{
-    margin-left: 4vw;
+    margin-left: 5vw;
 }

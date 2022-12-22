@@ -7,7 +7,7 @@
     background-image: url("../backgroundPictures/wall-background.jpg");
     height: 100vh;
     background-attachment: fixed;
-    overflow: scroll;
+    /*overflow: scroll;*/
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
