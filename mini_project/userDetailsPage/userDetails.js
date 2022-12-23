@@ -38,34 +38,32 @@ postBtnDiv.classList.add('postBtnDiv');
 userBtnDiv.appendChild(button);
 userDetailsDiv.append(postsDiv);
 
-let flag = true;
-
 button.onclick = () => {
 
-    fetch('https://jsonplaceholder.typicode.com/posts')
+    fetch(`https://jsonplaceholder.typicode.com/users/${user.id}/posts`)
         .then(value => value.json())
         .then(posts => {
-            posts.filter(post => post.userId === user.id)
-                .map(post => {
-                    const postBtnDiv = document.createElement('div');
-                    postBtnDiv.classList.add('postBtnDiv');
-                    postsDiv.appendChild(postBtnDiv);
+            posts.map(post => {
+                const postBtnDiv = document.createElement('div');
+                postBtnDiv.classList.add('postBtnDiv');
+                postsDiv.appendChild(postBtnDiv);
 
-                    const postDiv = document.createElement('div');
-                    postDiv.classList.add('postDiv');
-                    postDiv.innerText = post.title[0].toUpperCase() + post.title.slice(1);
+                const postDiv = document.createElement('div');
+                postDiv.classList.add('postDiv');
+                postDiv.innerText = post.title[0].toUpperCase() + post.title.slice(1);
 
-                    const postBtn = document.createElement('button');
-                    postBtn.classList.add('postBtn');
-                    postBtn.innerText = 'Post details';
+                const postBtn = document.createElement('button');
+                postBtn.classList.add('postBtn');
+                postBtn.innerText = 'Post details';
 
-                    const postA = document.createElement('a');
-                    postA.href = '../postDetailsPage/postDetails.html?dataPost=' + JSON.stringify(post);
+                const postA = document.createElement('a');
+                postA.href = '../postDetailsPage/postDetails.html?dataPost=' + JSON.stringify(post);
 
-                    postA.appendChild(postBtn);
-                    postBtnDiv.append(postDiv, postA);
-                });
+                postA.appendChild(postBtn);
+                postBtnDiv.append(postDiv, postA);
+            });
         });
+
     button.disabled = true;
 };
 
@@ -81,7 +79,7 @@ forward.onclick = next = () => {
     window.history.forward();
 }
 
-back.onclick = function previous() {
+back.onclick = previous = () =>{
     window.history.back();
 }
 

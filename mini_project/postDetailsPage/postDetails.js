@@ -18,11 +18,10 @@ postDiv.innerHTML = `
 const postCommentsDiv = document.createElement('div');
 postCommentsDiv.classList.add('postCommentsDiv');
 
-fetch('https://jsonplaceholder.typicode.com/comments')
+fetch(`https://jsonplaceholder.typicode.com/posts/${post.id}/comments`)
     .then(value => value.json())
     .then(comments => {
-        comments.filter(comment => post.id === comment.postId)
-            .map(comment => {
+            comments.map(comment => {
                 const {id, postId, name, email, body} = comment;
                 const commentDiv = document.createElement('div');
                 commentDiv.classList.add('commentDiv');
@@ -45,7 +44,6 @@ let click = true;
 button.addEventListener('click', () => {
     postDetailsMain.classList.toggle('light-theme');
 
-    console.log(button.length);
     if (!click) {
         button.innerText = 'light';
     }
@@ -59,7 +57,7 @@ const back = document.createElement('button');
 back.classList.add('back');
 back.innerText = 'back';
 
-back.onclick = function previous() {
+back.onclick = previous = () => {
     window.history.back();
 }
 

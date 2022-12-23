@@ -31,31 +31,6 @@
 }
 
 .userDetailsBtn:hover {
-    height: 3.3vh;
     background-color: var(--bg-bthHover);
     transition: 1s;
 }
-
-/*.userDetailsBtn:before {*/
-/*    content: "";*/
-/*    display: block;*/
-/*    width: 5px;*/
-/*    height: 100%;*/
-/*    position: absolute;*/
-/*    background: #a4a2a2;*/
-/*    transform: skewX(20deg);*/
-/*    filter: blur(15px);*/
-/*    top: 0;*/
-/*    left: -200px;*/
-/*    animation: xxx 3500ms ease-in-out infinite;*/
-/*}*/
-
-/*@keyframes xxx {*/
-/*    0% {*/
-/*        left: -20px;*/
-/*    }*/
-/*    100%{*/
-/*        left: 150%;*/
-/*    }*/
-/*}*/
-
