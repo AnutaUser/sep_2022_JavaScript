@@ -542,89 +542,155 @@
 // 2й - оставляет старше 29 лет включительно
 // 3й - оставляет тех у кого город киев
 // Данные выводить в документ
-
-let usersWithAddress = [
-    {id: 1, name: 'vasya', age: 31, status: false, address: {city: 'Lviv', street: 'Shevchenko', number: 16}},
-    {id: 2, name: 'petya', age: 30, status: true, address: {city: 'Kyiv', street: 'Shevchenko', number: 1}},
-    {id: 3, name: 'kolya', age: 29, status: true, address: {city: 'Lviv', street: 'Shevchenko', number: 121}},
-    {id: 4, name: 'olya', age: 28, status: false, address: {city: 'Ternopil', street: 'Shevchenko', number: 90}},
-    {id: 5, name: 'max', age: 30, status: true, address: {city: 'Lviv', street: 'Shevchenko', number: 115}},
-    {id: 6, name: 'anya', age: 31, status: false, address: {city: 'Kyiv', street: 'Shevchenko', number: 2}},
-    {id: 7, name: 'oleg', age: 28, status: false, address: {city: 'Ternopil', street: 'Shevchenko', number: 22}},
-    {id: 8, name: 'andrey', age: 29, status: true, address: {city: 'Lviv', street: 'Shevchenko', number: 43}},
-    {id: 9, name: 'masha', age: 30, status: true, address: {city: 'Kyiv', street: 'Shevchenko', number: 12}},
-    {id: 10, name: 'olya', age: 31, status: false, address: {city: 'Lviv', street: 'Shevchenko', number: 16}},
-];
-
-for (const user of usersWithAddress) {
-    const userDiv = document.createElement('div');
-    userDiv.classList.add('user');
-    userDiv.style.width = '18%';
-    userDiv.innerHTML = `
-        <p>ID: ${user.id}</p>
-        <h3>Name: ${user.name}</h3>
-        <p>Age: ${user.age}</p>
-        <p>Status: ${user.status}</p>
-        <p>Address: </p>
-        <p>City: ${user.address.city}</p>
-        <p>Street: ${user.address.street}</p>
-        <p>Number: ${user.address.number}</p>
-        <hr>
-    `;
-    document.body.append(userDiv);
-    document.body.style.display = 'flex';
-    document.body.style.flexWrap = 'wrap';
-    document.body.style.justifyContent = 'spaseEvenly';
-}
-
-const form = document.createElement('form');
-document.body.append(form);
-form.style.width = '100%';
-form.style.textAlign = 'center';
-
-const check1 = document.createElement('input');
-check1.setAttribute('type', 'checkbox');
-check1.style.font = '50px'
-
-const check2 = document.createElement('input');
-check2.setAttribute('type', 'checkbox');
-
-const check3 = document.createElement('input');
-check3.setAttribute('type', 'checkbox');
-
-form.append(check1, check2, check3);
-
-check1.onclick = () => {
-    const users = document.getElementsByClassName('user');
-    console.log(users);
-    for (const user of users) {
-        console.log(user)
-        if (user.value === 'false') {
-            console.log(user);
-        }
-    }
-    // const filter = users.filter(user => user.status === false);
-    // console.log(filter);
-    // const filter = users.filter(user => user.status === false);
-    // console.log(filter);
-};
-
-check2.onclick = () => {
-    const filter = usersWithAddress.filter(user => user.age >= 29);
-    console.log(filter);
-};
-
-check3.oninput = () => {
-    const filter = usersWithAddress.filter(user => user.address.city === 'Kyiv');
-    console.log(filter);
-};
-
-// *****(Прям овердоз с рекурсией) Создать функцию которая принимает какой-либо элемент DOM-структуры .Функция создает в боди 2 кнопки (назад/вперед)
-// при нажатии вперед, вы переходите к дочернему элементу, при еще одном нажатии на "вперед", вы переходите к следующему дочернему элементу (лежащему на одном уровне)
-// НО если у (какого-либо)дочеренего элемента есть дети, то нажатие "вперед" позволяет нам войти внутрь элемента и  выводит первого ребенка. и тд.
-// Когда все дети заканчиваются, мы выходим из данного дочернего элемента и переходим к следующему, лежащему с ним на одном уровне
 //
+// let usersWithAddress = [
+//     {id: 1, name: 'vasya', age: 31, status: false, address: {city: 'Lviv', street: 'Shevchenko', number: 16}},
+//     {id: 2, name: 'petya', age: 30, status: true, address: {city: 'Kyiv', street: 'Shevchenko', number: 1}},
+//     {id: 3, name: 'kolya', age: 29, status: true, address: {city: 'Lviv', street: 'Shevchenko', number: 121}},
+//     {id: 4, name: 'olya', age: 28, status: false, address: {city: 'Ternopil', street: 'Shevchenko', number: 90}},
+//     {id: 5, name: 'max', age: 30, status: true, address: {city: 'Lviv', street: 'Shevchenko', number: 115}},
+//     {id: 6, name: 'anya', age: 31, status: false, address: {city: 'Kyiv', street: 'Shevchenko', number: 2}},
+//     {id: 7, name: 'oleg', age: 28, status: false, address: {city: 'Ternopil', street: 'Shevchenko', number: 22}},
+//     {id: 8, name: 'andrey', age: 29, status: true, address: {city: 'Lviv', street: 'Shevchenko', number: 43}},
+//     {id: 9, name: 'masha', age: 30, status: true, address: {city: 'Kyiv', street: 'Shevchenko', number: 12}},
+//     {id: 10, name: 'olya', age: 31, status: false, address: {city: 'Lviv', street: 'Shevchenko', number: 16}},
+// ];
+//
+// for (const user of usersWithAddress) {
+//     const userDiv = document.createElement('div');
+//     userDiv.classList.add('user');
+//     userDiv.style.width = '18%';
+//     userDiv.innerHTML = `
+//         <p>ID: ${user.id}</p>
+//         <h3>Name: ${user.name}</h3>
+//         <p>Age: ${user.age}</p>
+//         <p>Status: ${user.status}</p>
+//         <p>Address: </p>
+//         <p>City: ${user.address.city}</p>
+//         <p>Street: ${user.address.street}</p>
+//         <p>Number: ${user.address.number}</p>
+//         <hr>
+//     `;
+//     document.body.append(userDiv);
+//     document.body.style.display = 'flex';
+//     document.body.style.flexWrap = 'wrap';
+//     document.body.style.justifyContent = 'spaseEvenly';
+// }
+//
+// const form = document.createElement('form');
+// document.body.append(form);
+// form.style.width = '100%';
+// form.style.textAlign = 'center';
+//
+// const check1 = document.createElement('input');
+// check1.setAttribute('type', 'checkbox');
+// check1.style.font = '50px'
+//
+// const check2 = document.createElement('input');
+// check2.setAttribute('type', 'checkbox');
+//
+// const check3 = document.createElement('input');
+// check3.setAttribute('type', 'checkbox');
+//
+// form.append(check1, check2, check3);
+//
+// check1.onclick = () => {
+//     const users = document.getElementsByClassName('user');
+//     console.log(users);
+//     for (const user of users) {
+//         console.log(user)
+//         if (user.value === 'false') {
+//             console.log(user);
+//         }
+//     }
+//     // const filter = users.filter(user => user.status === false);
+//     // console.log(filter);
+//     // const filter = users.filter(user => user.status === false);
+//     // console.log(filter);
+// };
+//
+// check2.onclick = () => {
+//     const filter = usersWithAddress.filter(user => user.age >= 29);
+//     console.log(filter);
+// };
+//
+// check3.oninput = () => {
+//     const filter = usersWithAddress.filter(user => user.address.city === 'Kyiv');
+//     console.log(filter);
+// };
+
+// *****(Прям овердоз с рекурсией) Создать функцию которая принимает какой-либо элемент DOM-структуры .Функция создает
+// в боди 2 кнопки (назад/вперед) при нажатии вперед, вы переходите к дочернему элементу, при еще одном нажатии на
+// "вперед", вы переходите к следующему дочернему элементу (лежащему на одном уровне) НО если у
+// (какого-либо)дочеренего элемента есть дети, то нажатие "вперед" позволяет нам войти внутрь элемента и  выводит
+// первого ребенка. и тд. Когда все дети заканчиваются, мы выходим из данного дочернего элемента и переходим к
+// следующему, лежащему с ним на одном уровне.
+
+// const recursion = (arg) => {
+//     const back = document.createElement('button');
+//     back.innerText = 'back';
+//
+//     const forward = document.createElement('button');
+//     forward.innerText = 'forward';
+//
+//     document.body.append(back, forward);
+//
+//     back.onclick = () => {
+//         window.history.back();
+//     };
+//
+//     forward.onclick = () => {
+//         for (const child of arg.children) {
+//             // console.log(child);
+//             if (child.children.length === 0){
+//                 console.log(child)
+//                 child.style.background = 'red';
+//             } else {
+//                 recursion(child);
+//             }
+//
+//         }
+//     };
+// };
+// recursion(document.body);
+
 // - Напишите «Карусель» – ленту изображений, которую можно листать влево-вправо нажатием на стрелочки.
-//
+
+const div = document.createElement('div');
+document.body.append(div);
+
+div.style.width = '60%';
+div.style.height = '35vw';
+div.style.background = 'blue';
+div.style.marginTop = '10vh';
+div.style.display = 'flex';
+div.style.justifyContent = 'space-between';
+div.style.alignItems = 'center';
+
+document.body.style.display = 'flex';
+document.body.style.justifyContent = 'center';
+
+const back = document.createElement('button');
+back.innerHTML = '<i class="fa-solid fa-chevron-left"></i>';
+back.style.background = 'none';
+back.style.border = 'none';
+
+const forward = document.createElement('button');
+forward.innerHTML = '<i class="fa-solid fa-chevron-right"></i>';
+forward.style.background = 'none';
+forward.style.border = 'none';
+
+div.append(back, forward);
+
+forward.addEventListener('click', () => {
+    let arr = ['red', 'black', 'yellow', 'pink'];
+
+    for (const string of arr) {
+        console.log(string)
+        div.style.background = string;
+
+    }
+});
+
 //     Завдання важке для розуміння, але дуже легке в реалізації. Тут треба буде погуглити
 // *** При виділені сегменту тексту на сторінці він стає жирний/курсивний/або якось іншим способом змінює свій стан

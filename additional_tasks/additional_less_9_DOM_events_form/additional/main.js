@@ -185,21 +185,52 @@ let usersList = [
 
 // --------
 // за допомоги рекурсії перебрати структуру сторінки. зробити об'єкт, всі заголовки покласти в (масив) характеристику
-// headings,всі параграфи покласти в характеристику (масив) paragraphs
+//   headings,всі параграфи покласти в характеристику (масив) paragraphs
 //
+// let headings = [];
+// let paragraphs = [];
+//
+// const recursive = (arg) => {
+//
+//     for (const child of arg.children) {
+//
+//         if(child.children.length === 0){
+//             if(child.tagName[0] === 'H'){
+//                 headings.push(child)
+//
+//             }if(child.tagName === 'P'){
+//                 paragraphs.push(child.outerText);
+//             }
+//         }else {
+//             recursive(child);
+//         }
+//     }
+// }
+//
+// recursive(document.body);
+// console.log(headings);
+// console.log(paragraphs);
+
 // ------
 //
 // зробити div contenteditable ввести будь яке ціле слово. та при натисканні табуляції перетворити його на подвійний тег
 // asd ->tab-> <asd></asd>
 
 const div = document.createElement('div');
+div.style.background = 'pink';
 
 div.setAttribute('contenteditable', 'true');
-console.log(div.value);
-// let text = div;
-// console.log(text)
-// if (text + '\t') {
-    // text = <text></text>
-// }
+div.setAttribute('value', '');
+div.oninput = (e) => {
+    const text = div.innerText;
+    console.log(text);
+    // if (text + '/t'){
+    //     div.innerText = `<${text}></${text}>`
+    //     }
+    // div.addEventListener('keypress', () => {
+    //     div.innerText = `<${text}></${text}>`
+    // });
+
+};
 
 document.body.appendChild(div);
