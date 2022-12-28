@@ -213,7 +213,8 @@ let usersList = [
 
 // ------
 //
-// зробити div contenteditable ввести будь яке ціле слово. та при натисканні табуляції перетворити його на подвійний тег
+// зробити div contenteditable ввести будь яке ціле слово. та при натисканні табуляції
+// перетворити його на подвійний тег
 // asd ->tab-> <asd></asd>
 
 const div = document.createElement('div');
@@ -227,9 +228,9 @@ div.oninput = (e) => {
     // if (text + '/t'){
     //     div.innerText = `<${text}></${text}>`
     //     }
-    // div.addEventListener('keypress', () => {
-    //     div.innerText = `<${text}></${text}>`
-    // });
+    div.addEventListener("press", () => {
+        div.innerText = `<${text}></${text}>`
+    });
 
 };
 
