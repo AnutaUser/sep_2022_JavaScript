@@ -12,7 +12,7 @@ productsArray.forEach(product => {
     productDiv.innerHTML = `
     <div>${product.name}</div>
     <div>${product.number} Price: ${product.price}$</div>
-    <img src="${product.img}" alt="${product.name}"></img>
+    <img src="${product.img}" alt="${product.name}"/>
     `;
 
     const btnDiv = document.createElement('div');
